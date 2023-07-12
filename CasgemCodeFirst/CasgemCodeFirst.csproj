@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Dal\Entities\Booking.cs" />
     <Compile Include="Dal\Entities\Contact.cs" />
@@ -136,6 +137,10 @@
     <Compile Include="Dal\Context\TravelContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307120809075_mig_relation_guide_SocialMedia.cs" />
+    <Compile Include="Migrations\202307120809075_mig_relation_guide_SocialMedia.designer.cs">
+      <DependentUpon>202307120809075_mig_relation_guide_SocialMedia.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -220,6 +225,11 @@
     <Content Include="Template\go-trip-starter\assets\fonts\fontawesome-webfont.woff" />
     <Content Include="Template\go-trip-starter\assets\fonts\fontawesome-webfont.woff2" />
     <Content Include="Template\go-trip-starter\assets\fonts\FontAwesome.otf" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\PartialHead.cshtml" />
+    <Content Include="Views\Default\PartialContact.cshtml" />
+    <Content Include="Views\Default\PartialDestinations.cshtml" />
+    <Content Include="Views\Default\PartialFeature.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -237,6 +247,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202307120809075_mig_relation_guide_SocialMedia.resx">
+      <DependentUpon>202307120809075_mig_relation_guide_SocialMedia.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
