@@ -130,6 +130,7 @@
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\AdminGuideController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\ErrorPageController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Dal\Entities\Admin.cs" />
@@ -368,6 +369,7 @@
     <Content Include="Template\Report-Login-Free\fonts\fontawesome-webfont.woff" />
     <Content Include="Template\Report-Login-Free\fonts\fontawesome-webfont.woff2" />
     <Content Include="Template\Report-Login-Free\fonts\FontAwesome.otf" />
+    <Content Include="Views\ErrorPage\Page404.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

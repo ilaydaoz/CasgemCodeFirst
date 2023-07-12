@@ -5,9 +5,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace CasgemCodeFirst.Controllers
-{
+{  
+    
     public class LoginController : Controller
     {
         TravelContext travelContext = new TravelContext();
@@ -23,6 +25,16 @@ namespace CasgemCodeFirst.Controllers
             && x.Pasword == admin.Pasword);
             Session["usertravel"] = values.UserName.ToString();
             return RedirectToAction("Index", "AdminGuide");
+           if (values != null)
+            {
+                FormsAuthentication.SetAuthCookie(values.UserName, false);
+                Session["usertravel"] = values.UserName.ToString();
+                return RedirectToAction("Index", "AdminGuide");
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }
