@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CasgemCodeFirst.Dal.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,7 +9,7 @@ namespace CasgemCodeFirst.Controllers
 {
     public class DefaultController : Controller
     {
-        // GET: Default
+        TravelContext travelContext = new TravelContext();
         public ActionResult Index()
         {
             return View();
@@ -25,9 +26,19 @@ namespace CasgemCodeFirst.Controllers
        
         public PartialViewResult PartialDestinations()
         {
-            return PartialView();
+            var values = travelContext.Destinations.ToList();
+            return PartialView(values);
         }
         public PartialViewResult PartialFeature()
+        {
+            return PartialView();
+        }
+        
+        public PartialViewResult PartialExplore()
+        {
+            return PartialView();
+        }
+        public PartialViewResult PartialNavbar()
         {
             return PartialView();
         }
